@@ -1,5 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import {
+    HomeContainer, HeroSection, TopSection, 
+    Intro, Divider, CTASection, CTAButton, 
+    Blog, BlogSamples, BlogButton, 
+    Participation, Community, CommButton, 
+    Blueprint, BPButton, Shop, ShopButton, 
+    CTALower, CTASignup, Podcast, PodcastSamples, 
+    Footer, Social, Links
+
+} from './HomeStyles'
 
 function Home() {
     return (
@@ -136,5 +145,6 @@ function Home() {
         </HomeContainer>
     )
 }
+
 
 export default Home
