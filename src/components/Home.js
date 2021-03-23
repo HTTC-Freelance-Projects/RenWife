@@ -1,14 +1,12 @@
 import React from 'react'
-import {
-    HomeContainer, HeroSection, TopSection, 
-    Intro, Divider, CTASection, CTAButton, 
-    Blog, BlogSamples, BlogButton, 
-    Participation, Community, CommButton, 
-    Blueprint, BPButton, Shop, ShopButton, 
-    CTALower, CTASignup, Podcast, PodcastSamples, 
-    Footer, Social, Links
+import 
+    {HomeContainer, HeroSection, TopSection, 
+    Intro, Divider, CTASection, 
+    Blog, BlogSamples, Participation, Community,
+    Blueprint, Shop,  CTALower, CTASignup, 
+    Podcast, PodcastSamples, Footer, Social, Links}
 
-} from './HomeStyles'
+ from './HomeStyles'
 
 function Home() {
     return (
@@ -26,16 +24,16 @@ function Home() {
                 <Intro>
                     <div className="title">
                         <h3>Welcome to Renassaince Wife</h3>
-                        <h2>Description</h2>
+                        <h1>Where you can finally accomplish all the things you meant to.</h1>
                     </div>
-                    <div className="img"></div>
+                    <div className="img">image of Lana from front of site</div>
                 </Intro>
             </HeroSection>
             <Divider></Divider>
             <CTASection>
                 <h3 className="title">Mission</h3>
                 <p>hoidfahoasifaoisdhfasiohdf</p>
-                <CTAButton>LEARN MORE</CTAButton>
+                <div className="btn">LEARN MORE</div>
             </CTASection>
 
             <Blog>
@@ -45,21 +43,48 @@ function Home() {
                 </div>
                 
                 <BlogSamples>
-                    <div className="sample">One</div>
-                    <div className="sample">Two</div>
-                    <div className="sample">Three</div>
-                    <div className="sample">Four</div>
+                    
+                    <div className="sample">
+                    <img className = "blog-img"></img>
+                        <p>Category</p>
+                        <h4>Title</h4>
+                        <p>ahdjklfhaldfhaljhfajfhasdlkjfhalskfhalsdjh</p>
+                        <a href = "#">Read More ></a>
+                    </div>
+                    <div className="sample">
+                    <img className = "blog-img"></img>
+                        <p>Category</p>
+                        <h4>Title</h4>
+                        <p>Desc</p>
+                        <div className="btn">Read More</div>
+                    </div>
+                    <div className="sample">
+                    <img className = "blog-img"></img>
+                        <p>Category</p>
+                        <h4>Title</h4>
+                        <p>Desc</p>
+                        <div className="btn">Read More</div>
+                    </div>
+                    <div className="sample">
+                        <img className = "blog-img"></img>
+                        <p>Category</p>
+                        <h4>Title</h4>
+                        <p>Desc</p>
+                        <div className="btn">Read More</div>
+                    </div>
+        
                 </BlogSamples>
 
-                <BlogButton>SEE ALL BLOG POSTS</BlogButton>
+                <div className="btn">SEE ALL BLOG POSTS</div>
             </Blog>
 
             <Participation>
                 <Community>
                     <div className = "comm-left">
                         <h3 className="title">The Community</h3>
-                        <h2>Join women ........................</h2>
-                        <CommButton>JOIN NOW</CommButton>
+                        <h2>You're not alone.</h2>
+                        <p>Personal growth is just that, personal, but it doesn't have to be in isolation. Join others who are on their journey to personal growth for encouragement, support, and inspiration.</p>
+                        <div className="btn">JOIN NOW</div>
                     </div>
                     <img></img>
                 </Community>
@@ -68,7 +93,7 @@ function Home() {
                     <div className="bp-left">
                         <h3 className="title">Blueprint</h3>
                         <h2>hiuohadfoihafiohadfihoafd</h2>
-                        <BPButton>GET YOURS NOW</BPButton>
+                        <div className="btn">GET YOURS NOW</div>
                     </div>
                     <img></img>
                 </Blueprint>
@@ -77,8 +102,8 @@ function Home() {
             <Shop>
                 <div className = "shop-left">
                     <h3 className="title">The Shop</h3>
-                    <h2>hghyoihioh</h2>
-                    <ShopButton>SHOP NOW</ShopButton>
+                    <h2>"passthrough links"</h2>
+                    <div className="btn">SHOP NOW</div>
                 </div>
                 <img></img>
             </Shop>
@@ -88,39 +113,51 @@ function Home() {
                 <div className="cta-right">
                     <h2>hoioiajfdoiafd</h2>
                     <p>hoiafhd[oihadfoaihfd</p>
-                    <CTASignup>form</CTASignup>
+                    <CTASignup>
+                        <p>form</p>
+                        <div className="btn">Sign Up</div>
+                    </CTASignup>
+                    
                 </div>
             </CTALower>
 
             <Podcast>
                 <h1>The Podcast</h1>
                 <p>hoihpoihafdihapifdohaidhf</p>
+            
                 <PodcastSamples>
-                    <div className="pod-sample">
-                        <img></img>
-                        <button> x </button>
-                        <p>Episode One</p>
-                        <h3>Description</h3>
+                    <div className="pod-sample one">
+                        <div className = "pod-box">
+                            <img></img>
+                            <div className="pod-btn"> > </div>
+                            <p>Episode One</p>
+                            <h3>Description</h3>
+                        </div>
                         <div className="pod-brand">Ren Pod</div>
                     </div>
-                </PodcastSamples>
-                <PodcastSamples>
-                    <div className="pod-sample">
+              
+                    <div className="pod-sample two">
+                    <div className = "pod-box">
                         <img></img>
-                        <button> x </button>
+                        <div className="pod-btn"> > </div>
                         <p>Episode Two</p>
                         <h3>Description</h3>
+                        </div>
                         <div className="pod-brand">Ren Pod</div>
                     </div>
-                </PodcastSamples>
-                <PodcastSamples>
-                    <div className="pod-sample">
+                    <div className="pod-sample three">
+                    <div className = "pod-box">
                         <img></img>
-                        <button> x </button>
-                        <p>Episode Three</p>
+                        <div className="pod-btn"> > </div>
+                        <p>Episode Two</p>
                         <h3>Description</h3>
+                        </div>
                         <div className="pod-brand">Ren Pod</div>
                     </div>
+
+                
+                
+                   
                 </PodcastSamples>
             </Podcast>
 
@@ -132,12 +169,19 @@ function Home() {
                     <a href = "#">Podcast</a>
                     <a href = "#">Email</a>
                 </Social>
-
+                    <Divider></Divider>
                 <Links>
                     <a href = "#">Home</a>
-                    <a href = "#">Heart</a>
-                    <a href = "#">Health</a>
-                    <a href = "#">Harmony</a>
+                        <div>
+                        <a href = "#">Blog</a>
+                            <ul>
+                                <a href = "#">Home</a>
+                                <a href = "#">Heart</a>
+                                <a href = "#">Health</a>
+                                <a href = "#">Harmony</a>
+                            </ul>
+                    </div>
+                   
                 </Links>
                 <h4>Renaissance Wife | Copyright 2021</h4>
             </Footer>
