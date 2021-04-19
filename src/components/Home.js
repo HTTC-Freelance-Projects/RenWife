@@ -31,10 +31,11 @@ function Home() {
                         <h3>Welcome to Renassaince Wife</h3>
                         <h1>Where you can finally accomplish all the things you meant to.</h1>
                     </div>
-                    <div className="img">image of Lana from front of site</div>
+                    <img src = "https://renaissancewife.com/wp-content/uploads/2021/04/headshotbent.png"/>
                 </Intro>
                
             </HeroSection>
+            {/* <div className = "spacerImg2"></div> */}
             <Divider></Divider>
             <CTASection>
                 <h3 className="title">Mission</h3>

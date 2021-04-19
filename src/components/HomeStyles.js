@@ -5,7 +5,7 @@ import {size} from './MediaQueries'
 export const HomeContainer = styled.section `
     width: 100vw;
     min-height: 100vh;
-    background-color: #fff; 
+    // background-color: #fff; 
     display:flex; 
     flex-direction: column;
     justify-content:space-around;
@@ -17,6 +17,8 @@ export const HomeContainer = styled.section `
         padding: .75%;
         width: 10vw;
     }
+
+
 `
 export const HeroSection = styled.section `
     width: 100vw;
@@ -59,6 +61,16 @@ export const ImgWrap = styled.div`
      
     }
 `
+
+export const Divider = styled.div `
+
+    width: 96vw;
+    height: 7vh;
+    margin: 0 1% 0 1%;
+    background: url(https://renaissancewife.com/wp-content/uploads/2018/10/Spacer2.png);
+    box-shadow: inset 0px 0px 10px rgba(0,0,0, 0.9);
+
+`
 export const TopSection = styled.section `
     // width: 70vw;
     display: flex;
@@ -95,11 +107,11 @@ export const Intro = styled.section `
     }
 
 `
-export const Divider = styled.section `
-    padding: 2%;
-    background-color:grey;
-    width: 100vw;
-`
+// export const Divider = styled.section `
+//     padding: 2%;
+//     background-color:grey;
+//     width: 100vw;
+// `
 export const CTASection = styled.section `
     width: 100vw; 
     height: 50vh;
