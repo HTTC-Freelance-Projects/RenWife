@@ -1,6 +1,6 @@
 import React from 'react'
 import 
-    {HomeContainer, HeroSection, TopSection, 
+    {HomeContainer, HeroSection, TopSection, ImgWrap,
     Intro, Divider, CTASection, 
     Blog, BlogSamples, Participation, Community,
     Blueprint, Shop,  CTALower, CTASignup, 
@@ -21,14 +21,21 @@ function Home() {
                         <a href="#">Harmony</a>
                     </ul>
                 </TopSection>
+                <ImgWrap>
+                    <div className = "spacerImg"></div>
+                    <div className="headerImg"></div>
+                    <div className = "spacerImg"></div>
+                </ImgWrap>
                 <Intro>
                     <div className="title">
                         <h3>Welcome to Renassaince Wife</h3>
                         <h1>Where you can finally accomplish all the things you meant to.</h1>
                     </div>
-                    <div className="img">image of Lana from front of site</div>
+                    <img src = "https://renaissancewife.com/wp-content/uploads/2021/04/headshotbent.png"/>
                 </Intro>
+               
             </HeroSection>
+            {/* <div className = "spacerImg2"></div> */}
             <Divider></Divider>
             <CTASection>
                 <h3 className="title">Mission</h3>
@@ -49,7 +56,7 @@ function Home() {
                         <p>Category</p>
                         <h4>Title</h4>
                         <p>ahdjklfhaldfhaljhfajfhasdlkjfhalskfhalsdjh</p>
-                        <a href = "#">Read More ></a>
+                        <a href = "#">Read More</a>
                     </div>
                     <div className="sample">
                     <img className = "blog-img"></img>
@@ -127,37 +134,15 @@ function Home() {
             
                 <PodcastSamples>
                     <div className="pod-sample one">
-                        <div className = "pod-box">
-                            <img></img>
-                            <div className="pod-btn"> > </div>
-                            <p>Episode One</p>
-                            <h3>Description</h3>
-                        </div>
-                        <div className="pod-brand">Ren Pod</div>
+                       <img></img>
                     </div>
               
                     <div className="pod-sample two">
-                    <div className = "pod-box">
                         <img></img>
-                        <div className="pod-btn"> > </div>
-                        <p>Episode Two</p>
-                        <h3>Description</h3>
-                        </div>
-                        <div className="pod-brand">Ren Pod</div>
                     </div>
                     <div className="pod-sample three">
-                    <div className = "pod-box">
                         <img></img>
-                        <div className="pod-btn"> > </div>
-                        <p>Episode Two</p>
-                        <h3>Description</h3>
-                        </div>
-                        <div className="pod-brand">Ren Pod</div>
-                    </div>
-
-                
-                
-                   
+                    </div> 
                 </PodcastSamples>
             </Podcast>
 
