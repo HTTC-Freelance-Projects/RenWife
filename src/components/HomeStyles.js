@@ -1,8 +1,9 @@
 
 import styled from 'styled-components'
+import {size} from './MediaQueries'
 
 export const HomeContainer = styled.section `
-    min-width: 100vw;
+    width: 100vw;
     min-height: 100vh;
     background-color: #fff; 
     display:flex; 
@@ -18,11 +19,45 @@ export const HomeContainer = styled.section `
     }
 `
 export const HeroSection = styled.section `
-    // width: 75%; 
-    max-height: 65vh;
+    width: 100vw;
+    max-height: 100vh;
     background-color: #fec7c4;
     display:flex; 
     flex-direction:column; 
+
+`
+
+export const ImgWrap = styled.div`
+    max-width: 90vw;
+
+    @media (min-width: ${size.mobile}) and (max-width: ${size.tablet}) {
+        background-color:red;
+    }
+
+    @media (min-width: ${size.tablet}) and (max-width: ${size.desktop}) {
+        background-color:green;
+    }
+
+    
+    .spacerImg {
+        width: 96vw;
+        height: 7vh;
+        margin: 0 1% 0 1%;
+        background: url(https://renaissancewife.com/wp-content/uploads/2018/10/Spacer2.png);
+        box-shadow: inset 0px 0px 10px rgba(0,0,0, 0.9);
+    }
+
+    .headerImg {
+        width: 95vw;
+        height: 27vh;
+        margin: .5% 1% .5% 2%;
+        border-radius: 1%;
+        background:url(https://renaissancewife.com/wp-content/uploads/2021/04/header7.png);
+        background-repeat: no-repeat;
+        box-shadow: inset 0px 0px 10px rgba(0,0,0, 0.9);
+
+     
+    }
 `
 export const TopSection = styled.section `
     // width: 70vw;
@@ -58,6 +93,7 @@ export const Intro = styled.section `
         font-size: 2rem;
         padding: .5% 5%;
     }
+
 `
 export const Divider = styled.section `
     padding: 2%;
@@ -210,19 +246,7 @@ export const PodcastSamples = styled.section `
         border-radius: 100%;
     }
 
-    .pod-box-three {
-        background-color:red; 
-        width: 85%;
-        margin-left: 7%;
-        margin-top:-47%;
-        border-radius: 200% 0% 0% 0%;
-        padding-bottom:3%;
-        display:flex;
-        flex-direction:column;
-        justify-content:space-around;
-        align-items: center;
-    }
-      
+
       
     
 
@@ -230,10 +254,7 @@ export const PodcastSamples = styled.section `
     width: 30vw;
     padding-bottom: 2%;
     border-bottom: 25px solid #d6b3d6;
-    // display:flex;
-    // flex-direction:column;
-    // justify-content:space-around;
-    // align-items: center;
+
 }
 .one, .three {
     background-color: #fde6f0;
