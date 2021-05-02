@@ -2,14 +2,18 @@
 import styled from 'styled-components'
 import {size} from './MediaQueries'
 
+const flexMixin = `
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
+`
+
+
 export const HomeContainer = styled.section `
     width: 100vw;
     min-height: 100vh;
-    // background-color: #fff; 
-    display:flex; 
-    flex-direction: column;
-    justify-content:space-around;
-    align-items: center;
+    ${flexMixin}
 
     .btn {
         background-color: none;
@@ -21,52 +25,28 @@ export const HomeContainer = styled.section `
 
 `
 export const HeroSection = styled.section `
-    width: 100vw;
-    max-height: 100vh;
-    background-color: #fec7c4;
-    display:flex; 
-    flex-direction:column; 
+    ${flexMixin}
 
-`
-
-export const ImgWrap = styled.div`
-    max-width: 90vw;
-
-    @media (min-width: ${size.mobile}) and (max-width: ${size.tablet}) {
-        background-color:red;
+    .hero-body{
+        ${flexMixin}
+    }
+    .intro {
+        border: 1px solid #d6d6d6;
+        margin-top: 3vh;
+        width: 80vw;
+       ${flexMixin}
     }
 
-    @media (min-width: ${size.tablet}) and (max-width: ${size.desktop}) {
-        background-color:green;
-    }
-
-    
-    .spacerImg {
-        width: 96vw;
-        height: 7vh;
-        margin: 0 1% 0 1%;
-        background: url(https://renaissancewife.com/wp-content/uploads/2018/10/Spacer2.png);
-        box-shadow: inset 0px 0px 10px rgba(0,0,0, 0.9);
-    }
-
-    .headerImg {
-        width: 95vw;
-        height: 27vh;
-        margin: .5% 1% .5% 2%;
-        border-radius: 1%;
-        background:url(https://renaissancewife.com/wp-content/uploads/2021/04/header7.png);
-        background-repeat: no-repeat;
-        box-shadow: inset 0px 0px 10px rgba(0,0,0, 0.9);
-
-     
+    .lana {
+        width:80vw;
     }
 `
+
 
 export const Divider = styled.div `
 
-    width: 96vw;
+    width: 100vw;
     height: 7vh;
-    margin: 0 1% 0 1%;
     background: url(https://renaissancewife.com/wp-content/uploads/2018/10/Spacer2.png);
     box-shadow: inset 0px 0px 10px rgba(0,0,0, 0.9);
 
@@ -84,15 +64,25 @@ export const TopSection = styled.section `
         }
 `
 export const Intro = styled.section `
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 75vh;
-    padding: 2%;
+        @media (max-width: ${size.smMobile}) {
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 75vh;
+            padding: 2%;
+        }
 
     .title {
-        width: 45%;
-        border: 1px solid black;
+        @media(max-width:${size.smMobile}) {
+            width: 70vw;
+            font-size:1rem;
+            border: 1px solid #d6d6d6;
+        }
+
+        .titleH1 {
+            font-size:1.2rem;
+        }
     }
 
     .img { 
@@ -112,47 +102,66 @@ export const Intro = styled.section `
 //     background-color:grey;
 //     width: 100vw;
 // `
-export const CTASection = styled.section `
+export const CTA = styled.section `
     width: 100vw; 
-    height: 50vh;
+    height: 30vh;
 
-    background-color: #d5b1d5;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-    padding-bottom: 2%;
+    background-color: #89815b;
+    // display:flex;
+    // flex-direction: column;
+    // justify-content: space-around;
+    // align-items:center;
+    // padding-bottom: 2%;
 
 
-    .ctaBtn {
-        max-width: 10%;
-    }
+    // .ctaBtn {
+    //     max-width: 10%;
+    // }
 `
+//Blog Section//
 export const Blog = styled.section `
-    width: 100vw;   
-    padding-bottom: 5%; 
+ min-width: 100vw;
+ ${flexMixin}
 
-    .more-blog {
-        margin: 2%;
-    }
+ .btn-btm {
+    width: 35vw;
+    padding:2%;
+    margin: 2%;
+    border: 1px solid black;
+}
 `
 export const BlogSamples = styled.section `
+   
+    @media(max-width: ${size.smMobile}) {
     width: 100vw;
     display:flex; 
-    flex-direction: row; 
-    justify-content: space-evenly;
+    flex-direction:column;
+    justify-content: space-around;
+    }
+
+    @media(min-width: ${size.smTablet}) {
+        display:flex;
+        flex-direction:row;
+        width: 70vw;
+    }
   
 
+    .sample-top, .sample-bottom {
+        width: 100vw;
+        display:flex;
+    }
         .sample {
-            width: 20%;
+            width: 50%;
             padding: 1%;
             margin-bottom: 2%;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-evenly;
+            align-items:center;
 
             a{
                 text-decoration: none;
-            }
-
-           
+            } 
         }
 
         .blog-img {
@@ -160,20 +169,106 @@ export const BlogSamples = styled.section `
             height: 150px;
 
         }
+
+        .blog-desc{
+            width: 20vw;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            
+        }
+
 `
+//end Blog Section
 export const Participation = styled.section `
-        display:flex;
-        flex-direction:row;
-        justify-content: space-evenly; 
-        padding: 3%;
+
+
+        @media(max-width: ${size.lgMobile}) {
+            ${flexMixin}
+            width: 100vw;
+            background-color:yellow;
+        }
+
+        @media (min-width: ${size.smTablet}) {
+            display:flex;
+            flex-direction:row;
+            justify-content: space-evenly; 
+            width: 100vw;
+            padding: 3%;
+
+        }
 
         .btn {
             margin-left: 40%;
         }
 `
 export const Community = styled.section `
-        width: 45%;
-        background-color: #cae4d7;
+
+        @media(max-width: ${size.lgMobile}) {
+            margin: 3vh 0 3vh 0;
+            position:relative;
+            text-align:center;
+            color:black;
+            width: 85%;
+        }
+
+        @media (min-width: ${size.smTablet}) {
+            position:relative;
+            text-align:center;
+            width: 50%;
+        }
+        .commImg {
+           width: 100%;
+        }
+
+        .comm-left {
+            @media(max-width: ${size.smMobile}) {
+                position: absolute;
+                width: 35vw;
+                top: 45%;
+                left: 25%;
+                transform: translate(-50%, -50%);
+            }
+
+                @media (min-width:${size.medMobile}) and (max-width: ${size.lgMobile}){
+                    width: 28vw;
+                    position: absolute;
+                    top: 45%;
+                    left: 25%;
+                    transform: translate(-50%, -50%);
+                }
+
+                @media(min-width:${size.smTablet}) and (max-width: ${size.tablet}) {
+                    width: 22vw;
+                    position: absolute;
+                    // width: 35vw;
+                    top: 45%;
+                    left: 25%;
+                    transform: translate(-50%, -50%);
+                }
+                @media(min-width:${size.lgTablet}) {
+
+                }
+        }
+
+        .comm-left .title {
+            @media(max-width: ${size.smMobile}) {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+        }
+
+        .comm-left h2 {
+            @media(max-width: ${size.lgMobile}) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .comm-left p {
+            @media(max-width: ${size.lgMobile}) {
+                display:none;
+            }
+        }
 `
 export const Blueprint = styled.section `
         background-color: #d0dde8;
