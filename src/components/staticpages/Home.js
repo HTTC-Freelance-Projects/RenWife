@@ -15,9 +15,10 @@ function Home() {
                 <Header/>
                 <CallToAction/>
                 <BlogSection />
+                <PodcastSection />
                 <OptionSection />
                 <CallToAction/>
-                <PodcastSection />
+                {/* <PodcastSection /> */}
         {/* </Layout> */}
 
        

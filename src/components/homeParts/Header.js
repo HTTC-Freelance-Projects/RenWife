@@ -11,7 +11,7 @@ function Header() {
                 <div class="row hero-body">
                     <div class="col-sm-8 intro">
                         <h3>Welcome to Renassaince Wife</h3>
-                        <h4 className="titleH1">Where you can finally accomplish all the things you always meant to.</h4>
+                        <h4 className="titleH1">It's never too late for a personal renaissance.</h4>
                     </div>
                     <div class="col-sm-4 lana"><img src = "https://renaissancewife.com/wp-content/uploads/2021/04/headshotbent.png"/></div>
 

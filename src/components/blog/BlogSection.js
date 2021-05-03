@@ -21,32 +21,34 @@ export default function BlogSection() {
                  */}
 
                 <div className="blog-desc">
-                    <h1 className="title">The Blog</h1>
+                    <h1 className="blogTitle">The Blog</h1>
                 </div>
                 
                 <BlogSamples>
                 <div className = "sample-top">
+                <div className="sample">
+                        <img src={Heart}
+                            className = "blog-img"
+                            alt=""
+                            />
+                        <p>Heart</p>
+                        <h4>The Heart of the Matter is Your Heart Matters. </h4>
+                        <p>Taking time to really listen to your own heart may seem like an easy assignment but in this era of constant input and never ending demands for our attention, it is harder than you may think. </p>
+                        <Button />
+                </div>
+
                     <div className="sample">
                         <img src={Home}
                             className = "blog-img"
                             alt=""
                             />
-                        <p>Category</p>
-                        <h4>Title</h4>
-                        <p className="blog-desc">ahdjklfhaldfhaljhfajfhasdlkjfhalskfhalsdjh</p>
+                        <p>Home</p>
+                        <h4>The Heart of the Matter is Your Heart Matters. </h4>
+                        <p>Taking time to really listen to your own heart may seem like an easy assignment but in this era of constant input and never ending demands for our attention, it is harder than you may think. </p>
                        <Button />
                     </div>
 
-                    <div className="sample">
-                        <img src={Heart}
-                            className = "blog-img"
-                            alt=""
-                            />
-                        <p>Category</p>
-                        <h4>Title</h4>
-                        <p>Desc</p>
-                        <Button />
-                    </div>
+                
                 </div>
 
                 <div className="sample-bottom">
@@ -55,9 +57,9 @@ export default function BlogSection() {
                             className = "blog-img"
                             alt=""
                             />
-                        <p>Category</p>
-                        <h4>Title</h4>
-                        <p>Desc</p>
+                        <p>Health</p>
+                        <h4>The Heart of the Matter is Your Heart Matters. </h4>
+                        <p>Taking time to really listen to your own heart may seem like an easy assignment but in this era of constant input and never ending demands for our attention, it is harder than you may think. </p>
                         <Button />
                     </div>
 
@@ -66,9 +68,9 @@ export default function BlogSection() {
                             className = "blog-img"
                             alt=""
                             />
-                        <p>Category</p>
-                        <h4>Title</h4>
-                        <p>Desc</p>
+                        <p>Harmony</p>
+                        <h4>The Heart of the Matter is Your Heart Matters. </h4>
+                        <p>Taking time to really listen to your own heart may seem like an easy assignment but in this era of constant input and never ending demands for our attention, it is harder than you may think. </p>
                         <Button />
                     </div>
                 </div>

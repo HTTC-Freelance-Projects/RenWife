@@ -5,8 +5,8 @@ function PodcastSection() {
     return (
         <div>
             <Podcast>
-                <h1>The Podcast</h1>
-                <p>hoihpoihafdihapifdohaidhf</p>
+                <h1 className="podTitle">The Podcast</h1>
+                <p>Join our solo episodes and interviews with guests who, like you, are on their journey to a personal resnaissance.</p>
             
                 <PodcastSamples>
                     <div className="pod-sample one">
@@ -19,6 +19,7 @@ function PodcastSection() {
                     <div className="pod-sample three">
                         <img></img>
                     </div> 
+
                 </PodcastSamples>
             </Podcast>
         </div>

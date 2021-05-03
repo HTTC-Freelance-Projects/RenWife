@@ -8,7 +8,20 @@ const flexMixin = `
     justify-content: space-evenly;
     align-items:center;
 `
+ const titles = `
+    font-family:Amarithe;
+    color:#572a2a;
+    font-size: 10rem;
+    padding: 1.5%;
+    width: 50vw;
+ `
 
+ const shopTitles = `
+    font-family:Amarithe;
+    color:black;
+    font-weight:800;
+    width: 50vw;
+ `
 
 export const HomeContainer = styled.section `
     width: 100vw;
@@ -129,6 +142,14 @@ export const Blog = styled.section `
     margin: 2%;
     border: 1px solid black;
 }
+
+.blogTitle{
+    ${titles}
+
+    @media(max-width:${size.smMobile}) {
+        font-size: 5rem;
+    }
+
 `
 export const BlogSamples = styled.section `
    
@@ -151,8 +172,8 @@ export const BlogSamples = styled.section `
         display:flex;
     }
         .sample {
-            width: 50%;
-            padding: 1%;
+            width: 47%;
+            padding: 3.5%;
             margin-bottom: 2%;
             display:flex;
             flex-direction:column;
@@ -181,12 +202,12 @@ export const BlogSamples = styled.section `
 `
 //end Blog Section
 export const Participation = styled.section `
-
+        ${flexMixin}
 
         @media(max-width: ${size.lgMobile}) {
             ${flexMixin}
             width: 100vw;
-            background-color:yellow;
+            // background-color:yellow;
         }
 
         @media (min-width: ${size.smTablet}) {
@@ -219,54 +240,69 @@ export const Community = styled.section `
         }
         .commImg {
            width: 100%;
+
+           @media(max-width: ${size.smMobile}){
+               width: 72vw;
+           }
         }
 
         .comm-left {
-            @media(max-width: ${size.smMobile}) {
+            @media(max-width: ${size.lgMobile}) {
                 position: absolute;
-                width: 35vw;
+                width: 55vw;
                 top: 45%;
-                left: 25%;
+                left: 50%;
                 transform: translate(-50%, -50%);
             }
 
-                @media (min-width:${size.medMobile}) and (max-width: ${size.lgMobile}){
-                    width: 28vw;
-                    position: absolute;
-                    top: 45%;
-                    left: 25%;
-                    transform: translate(-50%, -50%);
-                }
 
-                @media(min-width:${size.smTablet}) and (max-width: ${size.tablet}) {
+                @media(min-width:${size.smTablet}) {
                     width: 22vw;
                     position: absolute;
-                    // width: 35vw;
                     top: 45%;
-                    left: 25%;
+                    left: 50%;
                     transform: translate(-50%, -50%);
-                }
-                @media(min-width:${size.lgTablet}) {
-
                 }
         }
 
         .comm-left .title {
-            @media(max-width: ${size.smMobile}) {
+            @media(max-width: ${size.lgMobile}) {
                 font-size: 2rem;
                 font-weight: 600;
+            }
+
+            @media(min-width: ${size.lgTablet}) {
+                font-size: 2.4rem;
+                font-weight: 700;
             }
         }
 
         .comm-left h2 {
-            @media(max-width: ${size.lgMobile}) {
+            @media(min-width: ${size.lgMobile}) {
                 font-size: 1.5rem;
+                font-weight: 700;
             }
         }
 
         .comm-left p {
             @media(max-width: ${size.lgMobile}) {
                 display:none;
+            }
+
+            @media(min-width: ${size.smTablet}) and (max-width:${size.tablet}) {
+                font-size: 1.2rem;
+            }
+
+            @media(min-width: ${size.lgTablet}) {
+                font-size: 2rem;
+            }
+        }
+
+        .optBtn {
+            @media(min-width: ${size.lgMobile}) {
+                font-size: 1.5rem;
+                font-weight: 700;
+                width: 10vw;
             }
         }
 `
@@ -280,31 +316,80 @@ export const Blueprint = styled.section `
         .btn {
             width: 55%;
             margin-left: 27%;
-        }
-
-        
+        }       
 `
 export const Shop = styled.section `
         width: 100vw;
         display:flex;
         flex-direction:row;
-        justify-content: space-around; 
-        background-color: #f0dbde;
+        background-color: #f7f7f7;
         padding: 5%;
 
-        .shop-left {
-            width: 25%;
-            margin-left: 4%;
+        @media{min-width: ${size.tablet}} {
+            width: 50vw;
         }
 
-        img {
-            width: 60%;
+        .shopBox {
+            position:relative;
+            text-align:center;
+
+            @media(min-width: ${size.lgTablet}) {
+                ${flexMixin}
+                width: 70vw;
+            }
+        }
+
+        .shop-left {
+            width: 45%;
+            height: 20vh;
+        
+            width: 50vw;
+            position: absolute;
+            top: 50%;   
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media(min-width: ${size.smTablet}) and(max-width: ${size.tablet}) {
+                top: 55%;
+                left: 40%;
+                
+            }
+        }
+        
+        .shopTitle{
+            ${shopTitles}
+
+                @media (max-width: ${size.lgMobile}){
+                    font-size: 3rem;
+                }
+                
+                @media(min-width: ${size.smTablet}) and (max-width: ${size.tablet}) {
+                    font-size: 3rem;
+                }
+                
+                @media(min-width: ${size.lgTablet}) {
+                    font-size: 4.5rem;
+                }
+            }
+        
+        .sword {
+           opacity:0.4;
+        }
+
+        .shopBtn {
+            
+            @media(min-width: ${size.lgTablet}) {
+                width: 10vw;
+                height: 3vh;
+                font-size: 1rem;
+            }
         }
 `
 export const CTALower = styled.section `
         width: 100vw;
         height: 30vh;
         background-color: #fdc2bd;
+     
         display:flex;
         flex-direction:row;
         justify-content: space-around; 
@@ -333,18 +418,33 @@ export const CTASignup = styled.section `
 export const Podcast = styled.section `
     width: 100vw;
     padding: 2%;
+    ${flexMixin}
+
+    .podTitle{
+        ${titles}
+
+        @media(max-width:${size.smMobile}) {
+            font-size: 4rem;
+        }
+    }
+    p{
+        font-size: 2rem;
+    }
 `
 export const PodcastSamples = styled.section `
     display:flex;
     flex-direction:row;
     justify-content: space-around; 
     margin-bottom: 3%;
+    width: 100vw;
 
     .pod-sample {
         display:flex;
         flex-direction:column;
         justify-content: space-around;
         align-items:center;
+        max-width: 30vw;
+
     }
     .pod-btn {
         border: 2px solid grey;
@@ -389,6 +489,7 @@ export const PodcastSamples = styled.section `
 
 }
 `
+
 
 
 export const Footer = styled.section `
